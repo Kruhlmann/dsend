@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require "optparse"
+require "ostruct"
+require "dsend/main"
+include DSend
+
+messages = []
+options = OpenStruct.new
+
+OptionParser.new do |parser|
+  parser.banner = "Usage: dsend [options]"
+  parser.on("-k", "--discord-key=DISCORDKEY", "Discord API bot key") do |k|
+    options[:api_key] = k
+  end
+  parser.on("-c", "--channel-id=CHANNEL_ID", "Discord channel id") do |c|
+    options[:chan_id] = c
+  end
+end.parse!
+
+ARGV.each { |a| messages.push(a)}
+
+DSend.send_message(options, messages)
