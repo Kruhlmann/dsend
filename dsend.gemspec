@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
-    s.name          = 'bobby-b'
-    s.version       = '0.0.4'
-    s.date          = '2020-01-16'
-    s.summary       = "Bobby B bot replacement"
+    s.name          = 'dsend'
+    s.version       = '1.0.0'
+    s.date          = '2020-06-26'
+    s.summary       = "Discord bot message sender"
     s.description   = ""
     s.authors       = ["Andreas Kruhlmann"]
-    s.email         = 'kruhlmann@protonmail.com'
-    s.files         = ["lib/bobby-b/bobby.rb"]
-    s.homepage      = 'https://github.com/Kruhlmann/bobby-b'
+    s.email         = 'andreas@kruhlmann.dev'
+    s.files         = ["lib/dsend/main.rb"]
+    s.homepage      = 'https://github.com/Kruhlmann/dsend'
     s.license       = 'GPL-3.0-or-later'
-    s.executables   = ["bobby-b"]
+    s.executables   = ["dsend"]
 end
